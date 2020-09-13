@@ -1,0 +1,17 @@
+<div class="row text-center">
+    <div *ngIf="mostrar" class="col">
+        *NgIf
+        <hr>
+        <button >Mirame</button>
+        <h2>Nombre: {{frase.nombre}} </h2>
+        <p>Mensaje: {{frase.mensaje}}</p>
+    </div>
+    <div class="col">
+        *NgFor
+        <hr>
+        <ol>
+            <li *ngFor="let gent of gente">{{gent}}</li>
+        </ol>
+    </div>
+</div>
+<button  class="btn btn-primary" (click)="mostrar = !mostrar">Mostrar / Ocultar</button>
